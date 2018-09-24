@@ -2,6 +2,7 @@
 
 namespace app;
 
+use app\core\Debug;
 use app\core\Request;
 
 /**
@@ -55,7 +56,7 @@ class App
         $route         = $this->getRouter()->parseRequest(trim(str_replace($baseUrl, '', $this->request->getUri()),
           '/'));
         $module_dir    = ROOT . '/modules/' . $route['module'];
-        if (!file_exists($module_dir . '/' . $route['module'] . 'Module.php')) {
+        if (!file_exists($module_dir . '/' . ucfirst($route['module']) . 'Module.php')) {
             $route = [
               'module'     => 'site',
               'baseUrl'    => 'site',
