@@ -1,0 +1,19 @@
+{
+  "name": "ttermitt/news-module",
+  "license": "free",
+  "authors": [
+    {
+      "name": "TTeRMiTT",
+      "email": "alexey.muzalev@gmail.com"
+    }
+  ],
+  "require": {
+    "gumlet/php-image-resize": "1.9.*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "app"
+    }
+  }
+}
